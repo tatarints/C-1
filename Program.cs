@@ -52,10 +52,9 @@ namespace lesson_3
             //}
             //foreach (int i in chars)
             //{
-            //        Console.Write(i);
+            //        Console.Write((char)(i));
             //}
-            //Программу написала, но смогла вывести только числовые значения, а как переходить к буквам недопонимаю.
-            //Методичку прочитала, ничего не нашла. Посмотрела в интернете, сложно всё объясняют. Помогите, пожалуйста!
+            
 
             //Console.WriteLine(System.Text.Encoding.Default.HeaderName);
 
