@@ -5,62 +5,62 @@ using System.Text;
 
 namespace lesson_5
 {
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        //1
-    //        string filename = "text.txt";
-    //        File.WriteAllText(filename, Console.ReadLine());
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1
+            string filename = "text.txt";
+            File.WriteAllText(filename, Console.ReadLine());
 
 
 
-    //        //2
-    //        string filedate = "startup.txt";
-    //        DateTime time = DateTime.Now;
-    //        string times = time.ToString();
-    //        File.WriteAllText(filedate, times);
+            //2
+            string filedate = "startup.txt";
+            DateTime time = DateTime.Now;
+            string times = time.ToString();
+            File.WriteAllText(filedate, times);
 
-    //    }
-    //}
-
-
+        }
+    }
 
 
-    ////3
-    //[Serializable]
-    //class Numbers
-    //{
-    //    public string Num { get; set; }
-    //    public Numbers(string num)
-    //    {
-    //        Num = num;
-    //    }
 
-    //}
 
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        // объект для сериализации
-    //        Console.WriteLine("Введите с клавиатуры произвольный набор чисел 0...255");
-    //        Numbers numbers = new Numbers(Console.ReadLine());
-    //        Console.WriteLine("Объект создан");
+    //3
+    [Serializable]
+    class Numbers
+    {
+        public string Num { get; set; }
+        public Numbers(string num)
+        {
+            Num = num;
+        }
 
-    //        // создаем объект BinaryFormatter
-    //        BinaryFormatter formatter = new BinaryFormatter();
-    //        // получаем поток, куда будем записывать сериализованный объект
-    //        using (FileStream fs = new FileStream("numb.bin", FileMode.OpenOrCreate))
-    //        {
-    //            formatter.Serialize(fs, numbers);
+    }
 
-    //            Console.WriteLine("Объект сериализован");
-    //        }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // объект для сериализации
+            Console.WriteLine("Введите с клавиатуры произвольный набор чисел 0...255");
+            Numbers numbers = new Numbers(Console.ReadLine());
+            Console.WriteLine("Объект создан");
 
-    //        Console.ReadLine();
-    //    }
-    //}
+            // создаем объект BinaryFormatter
+            BinaryFormatter formatter = new BinaryFormatter();
+            // получаем поток, куда будем записывать сериализованный объект
+            using (FileStream fs = new FileStream("numb.bin", FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(fs, numbers);
+
+                Console.WriteLine("Объект сериализован");
+            }
+
+            Console.ReadLine();
+        }
+    }
 
 
 
