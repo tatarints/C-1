@@ -80,7 +80,7 @@ namespace lesson_5
             };
             for (int i = 0; i < persArray.Length; i++)
             {
-                if (persArray[i].GetAge() > 40)
+                if (persArray[i].birthyear > 40)
                 {
                     Console.WriteLine(persArray[i].Info());
                 }
