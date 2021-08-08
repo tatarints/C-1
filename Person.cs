@@ -6,7 +6,6 @@ namespace lesson_5
 {
     class Person
     {
-        public static int current_year = 2021;
         public string name { get; set; }
         public string position { get; set; } 
         public string email { get; set; }   
@@ -27,11 +26,7 @@ namespace lesson_5
             this.wage = wage;
             this.birthyear = birthyear;
         }
-        public int GetAge()
-        {
-            return current_year - birthyear;
-        }
-        
+       
         public string Info()
         {
             return
